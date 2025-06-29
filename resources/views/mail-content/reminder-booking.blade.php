@@ -109,18 +109,24 @@
                     <img src="https://www.jogjaborobudur.com/traveler/images/logoabout.JPG" class="imageemail" style="max-width: 180px;"/>
                 </center>
             
-                <h2 style="text-align: center;">Complete your payment</h2>
+                <h2 style="text-align: center;">Your Trip is in 3 Days</h2>
             
                 <p style="text-align: center;">
-                    Hello , please click the link below to complete your payment for <strong></strong> on <strong></strong>.
-                </p>
-            
-                <p style="text-align: center;">
-                    Total payment: <strong></strong>
-                </p>
-            
-                <p style="text-align: center;">
-                    If you’ve already completed your payment, you can ignore this message. Thank you for choosing Jogja Borobudur Tour & Travel!
+                    Hi {{ $name }},
+
+                    Just a quick reminder that your trip **“{{ $travelName }}”** is scheduled for **{{ $travelDate }}** — only 3 days left!
+                    
+                    Here are your trip details:
+                    - Travel Option: {{ $optionTravel }}
+                    - Participants: {{ $participants }} person{{ $participants > 1 ? 's' : '' }}
+
+                    Please ensure that your travel documents are prepared and any pickup arrangements (if selected) are confirmed.
+
+                    We are looking forward to welcoming you and making your experience with Jogja Borobudur Tour & Travel a memorable one.
+
+                    If you have any questions, don’t hesitate to reach out to us on <a href="mailto:care@jogjaborobudur.com">care@jogjaborobudur.com</a>
+                    
+                    Safe travels and see you soon!
                 </p>
             
                 <br>

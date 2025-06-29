@@ -30,7 +30,7 @@ class SendReminderBookingJob implements ShouldQueue {
             'total' => $this->data->total
         ], function($message) {
             $message->to($this->data->email)
-                    ->subject('Get Ready! Your Trip is Coming Up in 3 Days');
+                    ->subject('Your Trip is Coming Soon – 3 Days to Go!');
         });
     }
 }
