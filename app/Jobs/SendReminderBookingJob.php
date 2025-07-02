@@ -27,7 +27,11 @@ class SendReminderBookingJob implements ShouldQueue {
             'surname' => $this->data->surname,
             'travelDate' => $this->data->travelDate,
             'travelName' => $this->data->travelName,
-            'total' => $this->data->total
+            'pickupTime' => $this->data->pickupTime,
+            'optionName' => $this->data->optionName,
+            'adult' => $this->data->adult,
+            'participants' => $this->data->participants,
+            'child' => $this->data->child
         ], function($message) {
             $message->to($this->data->email)
                     ->subject('Your Trip is Coming Soon – 3 Days to Go!');

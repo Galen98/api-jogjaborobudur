@@ -112,21 +112,33 @@
                 <h2 style="text-align: center;">Your Trip is in 3 Days</h2>
             
                 <p style="text-align: center;">
-                    Hi {{ $name }},
+                    <p>Hi <b>{!! $name !!} {!! $surname !!}</b>,</p>
+                    <br>
+                    <p>Just a quick reminder that your trip <b>**“{!! $travelName !!}”**</b> is scheduled for <b>**{!! $travelDate !!}**</b> — only 3 days left!</p>
+                    <br>
 
-                    Just a quick reminder that your trip **“{{ $travelName }}”** is scheduled for **{{ $travelDate }}** — only 3 days left!
-                    
-                    Here are your trip details:
-                    - Travel Option: {{ $optionTravel }}
-                    - Participants: {{ $participants }} person{{ $participants > 1 ? 's' : '' }}
+                    <p>Here are your trip details:</p>
+                   <p>- Travel Option: {!! $optionName !!}</p>
+                    @if (!is_null($participants))
+                    <p>- Participants: {!! $participants !!} person </p>   
+                    @endif
 
-                    Please ensure that your travel documents are prepared and any pickup arrangements (if selected) are confirmed.
+                    @if (!is_null($adult))
+                    <p>- Adult: {!! $adult !!} person</p>   
+                    @endif
 
-                    We are looking forward to welcoming you and making your experience with Jogja Borobudur Tour & Travel a memorable one.
+                    @if (!is_null($child))
+                    <p>- Adult: {!! $child !!} person</p>   
+                    @endif
+                    <p>- Pickup Time: {!! $pickupTime !!}</p>
+                    <br>
+                    <p>Please ensure that your travel documents are prepared and any pickup arrangements (if selected) are confirmed.</p>
 
-                    If you have any questions, don’t hesitate to reach out to us on <a href="mailto:care@jogjaborobudur.com">care@jogjaborobudur.com</a>
-                    
-                    Safe travels and see you soon!
+                    <p>We are looking forward to welcoming you and making your experience with Jogja Borobudur Tour & Travel a memorable one.</p>
+
+                    <p>If you have any questions, don’t hesitate to reach out to us on <a href="mailto:care@jogjaborobudur.com">care@jogjaborobudur.com</a></p>
+                    <br>
+                    <p>Safe travels and see you soon!</p>
                 </p>
             
                 <br>
@@ -134,7 +146,19 @@
                     Best regards,<br>
                     <strong>Jogja Borobudur Tour & Travel</strong>
                 </p>
-                <hr>
+                <section class="footer" style="background-color: #fc2c04;color: white;margin-top:2px;">
+                    <div class="social">
+                      <a href="https://wa.me/628562862504"><img src="https://www.freepnglogos.com/uploads/whatsapp-png-image-9.png" height="40" width="40"></a>
+                      <a href="https://www.tripadvisor.com/Attraction_Review-g14782503-d25132575-Reviews-Jogja_Borobudur_Tour_Travel-Yogyakarta_Yogyakarta_Region_Java.html"><img src="https://www.freepnglogos.com/uploads/tripadvisor-logo-png/file-tripadvisor-logo-svg-wikipedia-3.png" height="40" width="40"></a>
+                      <a href="https://www.facebook.com/jogjaborobudur"><img src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-icon-png-images-icons-and-png-backgrounds-1.png" height="40" width="40"></a>
+                      <a href="https://www.instagram.com/masheru__/"><img src="https://www.freepnglogos.com/uploads/instagram-icon-png/wait-considerations-make-before-switching-instagram-logo-icon-4.png" height="40" width="40"></a>
+                      <a href="https://www.getyourguide.com/jogja-borobudur-tour-travel-s27125/">
+                      <img src="https://play-lh.googleusercontent.com/QMg0LWwb9Ki67eLcIcFpZxvCvBrW0aefn6BmXBJq3zj1G5Z_LYxcPdGKs_WWx8R5Gw" height="40" width="40"></a>
+                    </div>
+                    <ul class="list">
+                    </ul>
+                    <p class="copyright" style="color: white;">Jogja Borobudur Tour & Travel</p>
+                  </section>
             </div>            
 </div>
 </div>
